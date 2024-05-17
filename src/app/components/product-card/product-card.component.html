@@ -1,0 +1,6 @@
+<div class="product-card">
+  <img [src]="product.imageUrl" alt="{{ product.name }}">
+  <h3>{{ product.name }}</h3>
+  <p *ngIf="product.discount">{{ product.price * (1 - product.discount / 100) | currency:'S/' }}</p>
+  <p *ngIf="!product.discount">{{ product.price | currency:'S/' }}</p>
+</div>

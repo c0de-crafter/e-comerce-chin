@@ -1,0 +1,17 @@
+
+<div class="carousel-all">
+  <div class="carousel">
+    <button (click)="prevSlide()" class="carousel-button prev-button">‹</button>
+
+    <div class="carousel-container">
+      <div class="carousel-track" [style.transform]="'translateX(-' + (currentIndex * 100) + '%)'">
+        <div class="carousel-slide" *ngFor="let product of products">
+          <app-product-card [product]="product"></app-product-card>
+        </div>
+      </div>
+    </div>
+
+    <button (click)="nextSlide()" class="carousel-button next-button">›</button>
+  </div>
+
+</div>
